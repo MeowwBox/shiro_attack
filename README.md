@@ -1,7 +1,7 @@
 # 免责声明
 该项目仅供合法的渗透测试以及爱好者参考学习，请各位遵守《中华人民共和国网络安全法》以及相应地方的法律，禁止使用该项目进行违法操作，否则自行承担相关责任！
 
-# shiro反序列化漏洞综合利用 v2.0
+# shiro反序列化漏洞综合利用 v2.2
 
 填坑,修bug。
 基于javafx,利用shiro反序列化漏洞进行回显命令执行以及注入各类内存马
@@ -14,9 +14,9 @@
 6. 通过POST请求中defineClass字节码实现注入内存马
 7. resources目录下shiro_keys.txt可扩展key
 
-## Servlet内存马
-注入类型：冰蝎,哥斯拉,蚁剑[自定义返回包格式],neoreGeorg,reGeorg（均为默认配置,当前最新版本）
-1. 提示：**注入内存马路径避免访问出错尽量选择静态资源目录。**
+## 内存马
+注入类型：冰蝎,哥斯拉,蚁剑[JSP 自定义返回包格式],neoreGeorg,reGeorg（均为默认配置,当前最新版本）
+1. 提示：**注入Servlet内存马路径避免访问出错尽量选择静态资源目录。**, Filter无需考虑
 1. 某些spring环境以jar包启动写shell麻烦
 2. 渗透中找目录很烦,经常出现各种写shell浪费时间问题
 3. 无落地文件舒服
@@ -26,9 +26,14 @@
 1. 解决serialVersionUID匹配cc/cb多种jar包
 2. ...
 
+## 修复日志
+2021.6.22
+1. 修复自定义参数无效
+2. 添加filter马
+
 ![](screenshot/1.png)
 
-![](screenshot/5.png)
+![](screenshot/5.jpg)
 
 ![](screenshot/2.png)
 
@@ -53,3 +58,4 @@
 
 ## 致谢
 - [https://github.com/Ch1ngg](https://github.com/Ch1ngg)
+- [https://github.com/yzddmr6](https://github.com/yzddmr6)
