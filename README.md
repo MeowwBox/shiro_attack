@@ -33,7 +33,7 @@
 
 ![](screenshot/1.png)
 
-![](screenshot/5.jpg)
+![](screenshot/5.png)
 
 
 ![](screenshot/2.png)
